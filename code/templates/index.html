@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Excel File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: url('/static/background.png');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Ensure Chinese characters use Arial or sans-serif */
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Ensure Chinese characters use Arial or sans-serif */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        input[type="file"], textarea, input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #e7e7e7;
+            border-radius: 5px;
+            width: 250px;
+            text-align: center;
+            font-family: Arial, sans-serif; /* Ensure Chinese characters use Arial or sans-serif */
+        }
+        input[type="file"] {
+            color: #a0a0a0; /* Light color for file input text */
+        }
+        textarea {
+            height: 150px;
+            resize: vertical;
+            color: #333333; /* Dark color for prompt input text */
+        }
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>一步行，步步行</h1>
+    <p>One step works, each works</p>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <textarea name="prompt" placeholder="Enter your prompt here"></textarea>
+        <input type="submit" value="Upload">
+    </form>
+</body>
+</html>
